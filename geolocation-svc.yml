@@ -8,6 +8,7 @@ metadata:
 spec:
   selector:
     name: geolocation-svc
+    app: geolocation-api
   type: NodePort
   ports:
     - port: 80
