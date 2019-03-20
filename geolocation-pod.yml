@@ -8,7 +8,7 @@ metadata:
 spec:
   containers:
     - name: geolocation-api
-      image: omkarshetkar/geolocation
+      image: omkarshetkar/geolocation:1.2
       ports:
         - containerPort: 8080
           name: http
