@@ -3,14 +3,13 @@ kind: Service
 metadata:
   name: geolocation-svc
   labels:
-      name: geolocation-svc
-      app: geolocation
+    name: geolocation-svc
+    app: geolocation
 spec:
   selector:
-    name: geolocation-svc
-    app: geolocation-api
+    name: geolocation-api 
   type: NodePort
   ports:
-    - port: 80
-      targetPort: 8080
-      protocol: TCP
+   - port: 80
+     targetPort: 8080
+     protocol: TCP
