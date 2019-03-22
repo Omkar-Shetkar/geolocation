@@ -1,4 +1,4 @@
-FROM openjdk:8
+FROM openjdk:8-alpine
 RUN mkdir -p /opt/packt/geolocation
 ADD target/geolocation-0.0.1-SNAPSHOT.jar /opt/packt/geolocation/
 EXPOSE 8080

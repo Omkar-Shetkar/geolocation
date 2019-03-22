@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Pod
 metadata:
- name: gelolocation
+ name: geolocation
 spec:
  containers:
- - image: omkarshetkar/geolocation:latest
+ - image: omkarshetkar/geolocation:slim
    name: geolocation
    ports:
    - containerPort: 8080
