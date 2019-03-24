@@ -4,7 +4,7 @@ import java.util.List;
 
 public interface GeoLocationService {
 
-	public GeoLocation create(GeoLocation geoLocation);
+	public void create(GeoLocation geoLocation) throws Throwable;
 
 	public List<GeoLocation> findAll();
 }

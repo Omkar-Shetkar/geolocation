@@ -22,8 +22,13 @@ public class GeoLocationController {
 	private GeoLocationService service;
 
 	@PostMapping(produces = "application/json", consumes = "application/json")
-	public GeoLocation create(@RequestBody GeoLocation geoLocation) {
-		return service.create(geoLocation);
+	public ResponseEntity<?> create(@RequestBody GeoLocation geoLocation) {
+		try {
+			service.create(geoLocation);
+			return new ResponseEntity<GeoLocation>(geoLocation, HttpStatus.OK);
+		} catch (Throwable t) {
+			return new ResponseEntity<Object>(t.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+		}
 	}
 
 	@GetMapping(produces = "application/json")
